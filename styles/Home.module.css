@@ -1,4 +1,5 @@
-/* .wrapper{
-    margin-bottom: 0px;
-    background-color: rgb(175, 160, 160);
-} */
+.linkWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }

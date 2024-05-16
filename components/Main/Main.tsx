@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import styles from "./Main.module.css";
 import cookies from "js-cookie";
 import CardsWrapper from "../CardsWrapper/CardsWrapper";
 import { TicketType } from "../../types/ticket";
-import { useRouter } from "next/router";
 import axios from "axios";
 import { GetServerSideProps } from 'next';
 import { getCookie } from "cookies-next";

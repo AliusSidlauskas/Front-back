@@ -63,7 +63,7 @@ const LoginForm = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <Button isLoading={isLoading} onLogin={onLogin} title="Login" />
+      <Button isLoading={isLoading} onClick={onLogin} title="Login" />
       {isError && <div className={styles.error}>Fill all inputs</div>}
 
       {isBadData && <div className={styles.error}>Wrong data</div>}

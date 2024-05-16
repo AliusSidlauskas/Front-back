@@ -13,6 +13,10 @@
 // 14. Item puslapy - item galima ištrinti paspaudus ant delete mygtuko;
 // 15. Suvienodit url;
 // 16. EXTRA: pridėti main puslapiui SSR fetch
+// 17. Sukurti Item puslpį, jame atvaizduot duomenis;
+// 18. Pridėt ištrinimo mygtuką;
+// 19.EXTRA: Prieš ištrinant turi atsirast modal'as kuris paklaustu ar tikrai norim ištrint item;
+// 20. Sukurti game pridėjimo formą;
 
 
 import React from "react";
@@ -20,6 +24,8 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
 import { links } from "../constans/links";
 import  Main from "../components/Main/Main"
+import Link from "next/link";
+
 // import cookies from "js-cookie";
 // import CardsWrapper from "../components/CardsWrapper/CardsWrapper";
 // import { TicketType } from "../types/ticket";
@@ -54,6 +60,9 @@ const Index = () => {
   return (
     <div className={styles.main}>
       <Header logo={"Fly Alone"} links={links} />
+      <div className={styles.linkWrapper}>
+        <Link href="/add-ticket">Create Ticket</Link>
+      </div>
       {/* {tickets && <CardsWrapper tickets={tickets} />} */}
       <Main  />
     </div>
