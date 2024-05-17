@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import cookies from "js-cookie";
 import { TicketType } from "@/types/ticket";
 import { useRouter } from "next/router";
 import Button from "../Button/Button";
 import styles from "./ItemWrapper.module.css";
+import Modal from "../Modal/Modal";
 
 type ItemWrapperProps = {
   ticket: TicketType;
@@ -14,6 +15,7 @@ const ItemWrapper = ({ ticket }: ItemWrapperProps) => {
   const router = useRouter();
 
   console.log(ticket);
+  const [isShowWarning, setShowWarning] = useState(false)
 
   const deleteItem = async () => {
     try {
@@ -55,9 +57,13 @@ const ItemWrapper = ({ ticket }: ItemWrapperProps) => {
           type="WARNING"
           isLoading={false}
           title="Delete item"
-          onClick={deleteItem}
+          onClick={() => setShowWarning(true)}
         />
       </div>
+
+      {isShowWarning && (
+        <Modal message="Realy want to delete ticket?" onConfirm={deleteItem} onCancel={() => setShowWarning(false)}/>
+      )}
     </main>
   );
 };

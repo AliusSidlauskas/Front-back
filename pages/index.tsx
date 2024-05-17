@@ -17,6 +17,9 @@
 // 18. Pridėt ištrinimo mygtuką;
 // 19.EXTRA: Prieš ištrinant turi atsirast modal'as kuris paklaustu ar tikrai norim ištrint item;
 // 20. Sukurti game pridėjimo formą;
+// 19. Prieš ištrinant turi atsirast modal'as kuris paklaustu ar tikrai norim ištrint item;
+// 20. Mobile menu
+// 21. Sukurti puslapio template;
 
 
 import React from "react";
