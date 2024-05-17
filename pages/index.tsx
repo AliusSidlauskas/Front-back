@@ -28,6 +28,7 @@ import Header from "../components/Header/Header";
 import { links } from "../constans/links";
 import  Main from "../components/Main/Main"
 import Link from "next/link";
+import PageTemplate from "../components/PageTemplate/PageTemplate";
 
 // import cookies from "js-cookie";
 // import CardsWrapper from "../components/CardsWrapper/CardsWrapper";
@@ -60,15 +61,14 @@ const Index = () => {
   //   fetchTickets();
   // }, []);
 
-  return (
-    <div className={styles.main}>
-      <Header logo={"Fly Alone"} links={links} />
+  return (<PageTemplate>
       <div className={styles.linkWrapper}>
         <Link href="/add-ticket">Create Ticket</Link>
       </div>
       {/* {tickets && <CardsWrapper tickets={tickets} />} */}
       <Main  />
-    </div>
+    
+    </PageTemplate>
   );
 };
 

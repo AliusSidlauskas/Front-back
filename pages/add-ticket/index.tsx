@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header";
 import { links } from "../../constans/links";
 import styles from "./CreateTicket.module.css";
 import Button from "../../components/Button/Button"
+import PageTemplate from "../../components/PageTemplate/PageTemplate";
 
 const CreateTicket = () => {
   const router = useRouter();
@@ -53,8 +54,7 @@ const CreateTicket = () => {
     destinationImageUrl;
 
   return (
-    <div>
-      <Header logo={"Choose tickets"} links={links} />
+    <PageTemplate>
 
       <div className={styles.form}>
 
@@ -89,7 +89,7 @@ const CreateTicket = () => {
     title = "Create Ticket"
     onClick={createTicket}/>
       </div>
-    </div>
+    </PageTemplate>
   );
 };
 

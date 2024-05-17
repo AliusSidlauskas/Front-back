@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from '../../components/Header/Header';
 import {links} from "../../constans/links"
 import ItemWrapper from "../../components/ItemWrapper/ItemWrapper"
+import PageTemplate from '../../components/PageTemplate/PageTemplate';
 
 const Ticket = () => {
   const [ticket, setTicket] = useState();
@@ -32,10 +33,9 @@ const Ticket = () => {
   }, [router])
 
   return (
-    <div>
-      <Header logo={"Fly Alone"} links={links} />
+    <PageTemplate>
       {ticket && <ItemWrapper ticket={ticket}/>}
-    </div>
+    </PageTemplate>
   )
 }
 
